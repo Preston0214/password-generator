@@ -57,6 +57,7 @@ function getUpperCase(){
     var upper= ""
     if (upperCaseAllowed){
         upper= "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        
     }
     return upper;
 }
@@ -73,16 +74,15 @@ var generateBtn = document.querySelector("#generate");
 function generatePassword(){
   passwordCriteria()
   var result= "";
-  var characterSet = passwordChar();
+  var result = passwordChar();
 
   for (var i=0; i<numberOfCharacters; i++){
-    result+= passwordChar(Math.floor(Math.random() * passwordChar.length))
+    result+= passwordChar.charAt(Math.floor(Math.random() * numberOfCharacters.length))
 }
 return result;
 
 }
 
-  
 
 
 // Write password to the #password input
